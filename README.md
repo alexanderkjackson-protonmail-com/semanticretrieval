@@ -21,4 +21,5 @@ superior model or paradigm (e.g. RoBERTa with late chunking).
 pyenv install 3.13.3
 pyenv local 3.13.3
 poetry install
-source .venv/bin/activate
+source $(poetry env info --path)/bin/activate
+```
