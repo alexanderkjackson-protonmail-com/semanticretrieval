@@ -7,3 +7,7 @@ openai_key.txt
 # Ignore dataset - We should ideally have a script to download the PDF, then
 # process it.
 dataset/*
+# Milvus stuff
+volumes/*
+user.yaml
+embedEtcd.yaml

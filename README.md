@@ -23,3 +23,25 @@ pyenv local 3.13.3
 poetry install
 source $(poetry env info --path)/bin/activate
 ```
+
+# Included tools
+It will likely be necessary to create multiple tools to help easily process a
+variety of information so it's prepared to be fed into the embedder and/or
+database itself. They're listed here.
+
+## pdf_analyzer
+> ⚠️ AI-generated
+
+> Needs human review. 
+
+> Consider switching to alternate, lighter PDF parser.
+
+Since many PDFs contain no metadata, this is a tool which uses PDFMiner to
+extract text and guess at the font sizes for headers. This allows more easily
+splitting the document into semantically-relevant sections. This does not
+actually preprocess any data for feeding into a model, but it assists in
+determining *how* to go about that.
+Example usage:
+```bash
+python pdf_analyzer.py ./dataset/CyberProtectionService_userguide_en-US.pdf
+```
